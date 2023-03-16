@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import altair as alt
 from dateutil.parser import parse
-import streamlit.components.v1 as components
+# import streamlit.components.v1 as components
 
 df = pd.read_csv('global_monthly_stats.csv', thousands=',')
 
@@ -50,9 +50,9 @@ chart = alt.Chart(filtered_df).mark_bar().encode(
 
 chart
 
-# Define function to render the embedded Streamlit app
-def render_streamlit_app():
-    components.iframe("https://kazahayan-summary-stats-monthly-release-counts-riulpf.streamlit.app/", height=600, scrolling=True)
+# # Define function to render the embedded Streamlit app
+# def render_streamlit_app():
+#     components.iframe("https://kazahayan-summary-stats-monthly-release-counts-riulpf.streamlit.app/", height=600, scrolling=True)
 
-# Call the function to render the embedded Streamlit app
-render_streamlit_app()
+# # Call the function to render the embedded Streamlit app
+# render_streamlit_app()
